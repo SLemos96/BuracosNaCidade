@@ -1,0 +1,136 @@
+#map {
+    height: 100%;
+  }
+  /* Optional: Makes the sample page fill the window. */
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #logo{
+      width: 60%;
+  }
+
+  #box1{
+    margin-top: 40%;
+  }
+
+  #endereco{
+    font-size: 14px;
+    font-family: Roboto, Arial, sans-serif;
+    border: none;
+    box-shadow: none;
+    /* width: 100%; */
+    background-color: #fff;
+    height: 40px;
+  }
+
+  #boxReferencia{
+      /* position: absolute; */
+      size: 100%;
+      z-index: 6;
+      left: 0px;
+      outline: none;
+  }
+
+  #search-panel {
+    /* position: absolute; */
+    margin-top: 8px;
+    left: 8px;
+    align-items: center;
+    /* margin: 8px 0 8px 8px; */
+    z-index: 6;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    border-radius: 8px;
+    text-align: center;
+    font-family: "Roboto", "sans-serif";
+    font-size: 15px;
+    line-height: 30px;
+    /* padding-left: 10px; */
+    flex-direction: column;
+    display: -webkit-flex;
+    display: flex;
+    width:370px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 20%), 0 -1px 0px rgb(0 0 0 / 2%);
+  }
+
+  #bg-floating-panel{
+    position: fixed;
+    /* visibility: hidden; */
+    /* top: 0px; */
+    /* margin: 8px 0 8px 8px; */
+    width:392px;
+    height: 100%;
+    z-index: 5;
+    /* background-color: #fff; */
+    /* border: 1px solid #999; */
+    background: transparent;
+    padding: 5px;
+    /* border-radius: 8px; */
+    text-align: center;
+    font-family: "Roboto", "sans-serif";
+    line-height: 30px;
+    padding-left: 10px;
+    flex-direction: column;
+    display: -webkit-flex;
+    display: flex;
+
+  }
+
+  #confirmarInfo, #latlong{
+    display: none;
+  }
+
+  #tagEndereco{
+    max-block-size: 100%;
+    margin-bottom: 30px;
+  }
+
+#input-entrada{
+  border: none;
+  box-shadow: none;
+}
+
+.form-control{
+  border: none;
+  box-shadow: none;
+
+}
+
+.input-group button{
+  background-color: #fff;
+  border: none;
+}
+
+#confirmarInfo .input-group{
+  margin-top: 8px;
+}
+
+.material-icons{
+  padding: -10px -10px;
+  color: gray;
+}
+
+label .upload-foto {
+  cursor: pointer;
+  margin: auto;
+  /* Style as you please, it will become the visible UI component. */
+}
+
+#btnGroupAddonFoto{
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+  margin: auto;
+}
+
+#fotoBuraco{
+  font-size: 13px;
+  margin: auto;
+  width: auto;
+  align-items: center;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Buracos da Cidade</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Roboto">
+    <script type="text/javascript" src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div>
+      <div id="bg-floating-panel">
+        <div>
+          <img id="logo" src="imgs/buraco.jpg"/>
+        </div>
+        
+        <div id="search-panel">
+          
+          <!-- parte de entrada do endereço do buraco -->
+          <div class="input-group">
+            <input id="endereco" type="text" class="form-control width100" placeholder="Digite o endereço do buraco">
+            <button class="btn btn-light" type="button">
+              <span class="material-icons">search</span>
+            </button>
+          </div>
+          
+        </div>
+        <br>
+        <!-- essa div P não aparece no código -->
+        <p id="latlong"></p>
+
+        <!-- parte do código que aparece depois de o usuário marcar o ponto -->
+        <div  id="confirmarInfo">
+          
+          <p id="tagEndereco"></p>
+          
+          <div>
+            <div class="input-group-text width100" id="btnGroupAddonFoto">
+              <p id="btnGroupAddonFoto">
+                <i class="bi bi-camera-fill"></i>
+                <i class="bi bi-card-image"></i>
+                Tem uma foto do buraco? Envia pra gente!
+              </p>
+            </div>
+            <div class="input-group-text width100" id="btnGroupAddonFoto">
+              <input type="file" id="fotoBuraco">
+            </div>
+          </div>
+          
+          <div id="divReferencia" class="input-group">
+            <div class="input-group-text" id="btnGroupAddonRefer"><i class="bi bi-geo-alt"></i></div>
+            <input id="pontoReferencia" type="text" class="form-control" placeholder="Insira um ponto de referência (opcional)" aria-label="Insira um ponto de referência" aria-describedby="btnGroupAddon">
+          </div>
+
+          <div id="divWhatsapp" class="input-group">
+            <div class="input-group-text" id="btnGroupAddonWpp"><i class="bi bi-whatsapp"></i></div>
+            <input id="whatsapp-contact" type="text" class="form-control" placeholder="Whatsapp para contato (opcional)" aria-label="Whatsapp para contato (opcional)" aria-describedby="btnGroupAddon">
+          </div>
+          <br>
+          <button onclick="enviarForm()">CONFIRMAR E ENVIAR</button>
+        </div>
+      </div>
+    </div>
+    
+
+    
+    
+    <div id="map"></div>
+    <!-- remover o comentário da linha de baixo pra o mapa voltar -->
+    <script async defer 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYC_kU3fEheqSlpHFZFFNiyfSj6J2J36A&libraries=places&callback=initMap"
+    type="text/javascript"></script>
+  </body>
+</html>
+
+<!-- TODO:
+    >> aperfeiçoar a parte do css
+      >> substituir o botão de buscar por um glyphicon de lupa
+      >> 
+    DONE >> diminuir o tamanho da logo
+    >> pensar num favicon pra colocar
+    >> ocultar a div de trás para ela aparecer somente quando for setado o marker da localização
+    >> inserir um campo de contato por email e outro campo de contato por whatsapp (não obrigatórios)
+    >> se possível remover uns marcadores padrões do google para o mapa ficar mais limpo
+    >> pesquisar sobre side pan que faz com que o painel lateral entre
+    >> EXTRA podemos pedir a localização do usuário para facilitar na marcação do buraco no mapa
+
+-->
